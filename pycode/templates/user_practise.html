@@ -1,0 +1,179 @@
+{% extends 'user.html' %}
+{% block content %}
+
+{% for question in questions %}
+    <style>
+        input[type = 'submit']{
+                  width: 100%;
+                  padding: 15px 20px;
+                  margin: 20px 20px;
+                  box-sizing: border-box;
+                  border: none;
+                  background-color:#270949;
+                  color:white;
+                  border-bottom: 1px solid white;
+                  border-radius:15px;
+            }
+            input[type='submit']:hover{
+                  width: 100%;
+                  padding: 15px 20px;
+                  margin: 20px 20px;
+                  border: none;
+                  background-color:green;
+                  color:white;
+                  border-bottom: 1px solid white;
+                  border-radius:15px;
+
+            }
+            .question{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin:2% 1% 1%;
+                padding:0% 0% 0% 4%;
+                border:1px solid white;
+                width:98%;
+                float:left;
+           }
+    </style>
+    <div class="question">
+        <form action="user_solve" method="post">
+            {% csrf_token %}
+        <div class="ques_part">
+            <p style="font-size:25px;"> {{question.question_name}}<br>
+                {% if question.question_type == 'Easy' %}
+                    <sup style="color:green;font-size:15px">{{question.question_type}}</sup>
+                {% elif question.question_type == 'medium' %}
+                    <sup style="color:blue;font-size:15px">{{question.question_type}}</sup>
+                {% elif question.question_type == 'hard' %}
+                    <sup style="color:red;font-size:15px">{{question.question_type}}</sup>
+                {% elif question.question_type == 'advance' %}
+                    <sup style="color:#270949;font-size:15px">{{question.question_type}}</sup>
+                {% endif %}
+                    <sup style="padding-left:50px;font-size:15px">score:{{question.question_score}}</sup>
+            </p>
+        </div>
+        <div class="solve_question">
+            <input type="hidden" name="code" value="[{{question.question_name}},{{question.question_type}},
+            {{question.question_score}},{{question.question_code}},{{question.problem}},{{question.input_format}},
+            {{question.output_format}},{{question.constraints}},{{question.sample_input}},{{question.sample_output}},
+            {{question.explanation}}]"/>
+            <input type="submit" value="SOLVE" >
+        </div>
+        </form>
+    </div>
+{% endfor %}
+
+{% endblock %}
+
+{% block body%}
+<style>
+.check_type{
+    margin:3% 2%;
+    padding:2% 1%;
+
+    }
+.boxes {
+  margin: auto;
+  padding: 500px;
+  background: #484848;
+}
+
+/*Checkboxes styles*/
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 20px;
+  font: 18px/20px 'Open Sans', Arial, sans-serif;
+  color: #270949;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid green;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity:1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+    .submit_check{
+        display:none;
+        }
+</style>
+
+<h4 style="padding:7% 1% 2% 1%;">Difficulty Level...!!!</h4>
+<p class="check_type">
+<form id='check_form' method="post" action="user_practise">
+    {% csrf_token %}
+    <input type="checkbox" name='easy' onchange="document.getElementById('check_form').submit()" id="box-1">
+    <label for="box-1">Easy</label>
+    <input type="checkbox" name='medium' onchange="document.getElementById('check_form').submit()" id="box-2">
+    <label for="box-2">Medium</label>
+    <input type="checkbox" name="hard" onchange="document.getElementById('check_form').submit()" id="box-3">
+    <label for="box-3">Hard</label>
+    <input type="checkbox" name="advance" onchange="document.getElementById('check_form').submit()" id="box-4">
+    <label for="box-4">Advance</label>
+    <input type="submit" class="submit_check">
+</form>
+    {% if easy == 'on' %}
+        <script>document.getElementById('box-1').checked = true;</script>
+    {% else %}
+        <script>document.getElementById('box-1').checked = false;</script>
+    {% endif %}
+
+    {% if medium == 'on' %}
+        <script>document.getElementById('box-2').checked = true;</script>
+    {% else %}
+        <script>document.getElementById('box-2').checked = false;</script>
+    {% endif %}
+
+    {% if hard == 'on' %}
+        <script>document.getElementById('box-3').checked = true;</script>
+    {% else %}
+        <script>document.getElementById('box-3').checked = false;</script>
+    {% endif %}
+
+    {% if advance == 'on' %}
+        <script>document.getElementById('box-4').checked = true;</script>
+    {% else %}
+        <script>document.getElementById('box-4').checked = false;</script>
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <p style="border-bottom: 1px solid #270949;margin:1% 2%;"></p>
+    <p style="text-align:justify;text-align-last:justify;margin:3% 2%;font-size:18px;">Python is one of the official language at Google. here we
+    provide some use full link to get more clarity of python Programming language.
+        <a href="https://mikkegoes.com/best-way-to-learn-coding/">Begginers guide for python</a>,
+        python is easiet language to learn and best language to start web development Porjects
+        <a href="https://mikkegoes.com/what-programming-language-should-i-learn/">Learn python from scratch</a>,
+        <a href="https://mikkegoes.com/best-language-for-web-development/">Web development projects with python</a>
+    </p>
+</div>
+{% endblock %}
+
+

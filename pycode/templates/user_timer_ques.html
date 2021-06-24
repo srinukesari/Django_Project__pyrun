@@ -1,0 +1,55 @@
+{% extends 'user_timer_exam.html' %}
+{% load static %}
+{% block timer_ques %}
+<style>
+        input[type = 'submit']{
+                  box-sizing: border-box;
+                  border: none;
+                  margin:1% 5%;
+                  padding:.8% 3%;
+                  float:right;
+                  background-color:#270949;
+                  color:white;
+                  border-bottom: 1px solid white;
+                  border-radius:20px;
+            }
+            input[type='submit']:hover{
+                  border: none;
+                  margin:1% 5%;
+                  padding:.8% 3%;
+                  background-color:green;
+                  color:white;
+                  float:right;
+                  border-bottom: 1px solid white;
+                  border-radius:20px;
+
+            }
+            .question{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin:1% 1% 0% 3%;
+                padding:0%;
+                border:1px solid white;
+                width:95%;
+                float:left;
+           }
+           .ques_part{
+                margin:1% 1% 1% 3%;
+                padding:0%;
+                border:1px solid white;
+                width:95%;
+                text-align:left;
+                float:left;
+            }
+</style>
+{% for cha in que_obj %}
+<div class="question">
+        <form action="user_exam_code" method="post">
+            {% csrf_token %}
+            <div class="ques_part"><i style="font-size:30px">{{forloop.counter}}.    {{cha.question_name}}</i>
+                <input type="hidden" name="code" value="{{cha.question_code}}"/>
+                <input type="submit" value="SOLVE" >
+            </div>
+        </form>
+</div>
+{% endfor %}
+{% endblock %}

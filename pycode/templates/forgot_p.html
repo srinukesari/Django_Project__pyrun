@@ -1,0 +1,54 @@
+{% extends 'home.html'%}
+
+{% block content%}
+<style>
+input{
+		  width: 50%;
+		  padding: 12px 20px;
+		  margin: 20px 0;
+		  box-sizing: border-box;
+		  border: none;
+		  background-color: transparent;
+		  border-bottom: 1px solid white;
+		  border-radius:8px;
+		  color:white;
+	}
+input[type='submit']{
+          width: 15%;
+		  padding: 6px 5px;
+		  margin: 20px 0px 20px 220px;
+		  box-sizing: border-box;
+		  border: none;
+		  font-size:18px;
+		  background-color:gray;
+		  border-bottom: 1px solid white;
+		  border-radius:8px;
+}
+
+.body{
+    color:white;
+    margin-top:150px;
+
+   }
+
+</style>
+<body>
+{% if set == 0 %}
+<form action="send_otp" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter Username"><br>
+    <input type="email" name="email" placeholder="Enter Registered Email"><br>
+    <input type="submit" value="sent OTP"><br>
+</form>
+{% else %}
+<form action="forgot_p" method="POST">
+    {% csrf_token %}
+    <input type="text" name="otp" placeholder="Enter OTP sent "><br>
+    <input type="hidden" name="votp" value="{{otp}}">
+    <input type="submit" value="verify"><br>
+</form>
+{% endif %}
+
+</body>
+
+{% endblock %}

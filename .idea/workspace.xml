@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a84ba95-5a16-4dfd-87b3-d0c6cc1fc9bc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/pyrun/pycode/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/pyrun/pycode/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyrun/pycode/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pyrun/pycode/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyrun/pycode/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrun/pycode/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyrun/pyrun/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrun/pyrun/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyrun/python_code_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyrun/python_code_area.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyrun/testing_sample.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="pyrun" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="python_code_area.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python_code_area.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="input" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="db.sqlite3" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db.sqlite3">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyrun/pyrun/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3060">
+              <caret line="155" column="99" selection-start-line="155" selection-start-column="99" selection-end-line="155" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyrun/pycode/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyrun/pycode/apps.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyrun/pycode/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-840">
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyrun/pycode/tests.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyrun/pycode/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pyrun/pycode/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11654">
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>C:\user\HAI\pyrun</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/pyrun" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pyrun/pyrun/urls.py" />
+        <option value="$PROJECT_DIR$/pyrun/asserts/plugin/codemirror/lib/codemirror.css" />
+        <option value="$PROJECT_DIR$/pyrun/asserts/js/default.js" />
+        <option value="$PROJECT_DIR$/pyrun/smaple_file.py" />
+        <option value="$PROJECT_DIR$/pyrun/sample.py" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/python_code_area.py" />
+        <option value="$PROJECT_DIR$/pyrun/python_code_area.py" />
+        <option value="$PROJECT_DIR$/pyrun/subprocess_check.py" />
+        <option value="$PROJECT_DIR$/pyrun/input" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/messages.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/signup.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/migrations/0015_auto_20200727_1419.py" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/admin.py" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/edit_profile.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_profile.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/loader.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/trail_and_error.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_edit_profile.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_execute.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_solve.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_challenges.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/models.py" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/exam_loader.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_execute_exam.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_timer_ques.html" />
+        <option value="$PROJECT_DIR$/pyrun/testing_sample.py" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/forgot_p.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_timer_exam.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_timer_code.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/home_quote.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/message.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_cha_exam.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/py_doc.html" />
+        <option value="$PROJECT_DIR$/pyrun/requirements.txt" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/home.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/urls.py" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/views.py" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/login.html" />
+        <option value="$PROJECT_DIR$/pyrun/pycode/templates/user_practise.html" />
+        <option value="$PROJECT_DIR$/pyrun/pyrun/settings.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="711" />
+    <option name="height" value="502" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pyrun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyrun" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\user\HAI\pyrun\pyrun\static" />
+      <recent name="C:\user\HAI\pyrun\pyrun\pycode" />
+      <recent name="C:\user\HAI\pyrun\pyrun\static\images" />
+      <recent name="C:\user\HAI\pyrun\static\images" />
+      <recent name="C:\user\HAI\pyrun\pyrun\pycode\images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.testing_sample">
+    <configuration name="subprocess_check" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pyrun" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyrun" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyrun/subprocess_check.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="testing_sample" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pyrun" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyrun" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyrun/testing_sample.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pyrun" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyrun/pycode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyrun/pycode/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.subprocess_check" />
+      <item itemvalue="Python.views" />
+      <item itemvalue="Python.testing_sample" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.testing_sample" />
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.subprocess_check" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a84ba95-5a16-4dfd-87b3-d0c6cc1fc9bc" name="Default" comment="" />
+      <created>1595044336130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595044336130</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49786323" visible="true" weight="0.22842261" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297546" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3297546" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3297546" />
+      <window_info id="Structure" order="1" sideWeight="0.50213677" side_tool="true" weight="0.27901787" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.09355828" />
+      <window_info id="Favorites" order="2" sideWeight="0.50213677" side_tool="true" weight="0.27901787" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17782739" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3297546" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3297546" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2576687" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_0NeDY2u.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_2UNXbMp.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_DXz9nFs.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_EowpuYe.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_eYqbiRk.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_jD9qVgF.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_jHYKFeq.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_JoCHNHO.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_SJ04Djw.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_V7aNQBq.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_1_ZZC2tzT.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_avabstq.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/my_profile_u2lhbM4.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/pp_pic1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/pp_pic1_IlDfxwn.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/profile_pics/srinu_pic.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/challenge_pics/cirucuits.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/challenge_pics/cisco_hiring.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/challenge_pics/data_structures.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/challenge_pics/google_hackathon.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asserts/images/pyrun_logo_user.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asserts/images/pyrun_logo.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/templates/home_quote.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/templates/py_doc.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3900">
+          <caret line="195" column="18" selection-start-line="195" selection-start-column="18" selection-end-line="195" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/templates/user_practise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/asgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/python_code_area.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/testing_sample.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/settings.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing_sample.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_code_area.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.sqlite3">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pyrun/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3060">
+          <caret line="155" column="99" selection-start-line="155" selection-start-column="99" selection-end-line="155" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-840">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyrun/pycode/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11654">
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,214 @@
+{% extends 'user.html' %}
+{% load static %}
+{% block content %}
+<style xmlns="http://www.w3.org/1999/html">
+.content{
+                width:53%;
+                height:85%;
+                background-color:white;
+                float:left;
+                overflow:auto;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           }
+           .sidebar{
+                float:left;
+                width:46%;
+                overflow:auto;
+                height:570px
+                background-color:#E9DEDC;
+            }
+.body{
+   white-space: pre-line;
+   padding :0px;
+}
+</style>
+<p>
+<p style="font-size:30px ;padding-left:30px">{{question_name}}<br>
+    {% if question_type == 'Easy' %}
+        <sup style="color:green;font-size:15px">{{question_type}}</sup>
+    {% elif question_type == 'medium' %}
+        <sup style="color:blue;font-size:15px">{{question_type}}</sup>
+    {% elif question_type == 'hard' %}
+        <sup style="color:red;font-size:15px">{{question_type}}</sup>
+    {% elif question_type == 'advance' %}
+        <sup style="color:#270949;font-size:15px">{{question_type}}</sup>
+    {% endif %}
+        <sup style="font-size:15px;padding-left:40px;">Score:{{question_score}}</sup>
+    <hr>
+    <pre style="font-size:18px ;padding-left:20px;">
+    <em>{{code}}
+        <br>
+        <strong style="float:left;">Input format</strong><br>{{input_format}}
+        <br>
+        <strong style="float:left;">Output format</strong><br>{{output_format}}
+        <br>
+        <strong style="float:left;">Constraints</strong><br>{{constraints}}
+        <br>
+        <strong style="float:left;">Sample input</strong><br>{{sample_input}}
+        <br>
+        <strong style="float:left;">Sample output</strong><br>{{sample_output}}
+        <br>
+        <strong style="float:left;">Explanation</strong><br>{{explanation}}
+        <br>
+    </em>
+    </pre>
+</p>
+</body>
+{% endblock %}
+{% block body %}
+<style>
+    .solve_ques{
+        width:100%;
+        height:555px;
+    }
+    .head_select{
+        width:95%;
+        height:30px;
+        background-color:transparent;
+        color:#270949;
+        font-size:20px;
+    }
+    .code_area{
+        width:100%;
+        height:480px;
+        overflow:auto;
+        background-color:transparent;
+    }
+    input[type="text"]{
+        width:100%;
+        height:470px;
+        background-color:transparent;
+    }
+    .buttons_area{
+        width:95%;
+        background-color:yellow:
+        height:200px;
+    }
+    input[type="submit"]{
+                  width: 15%;
+                  padding: 5px ;
+                  margin: 15px 10px 0px;
+                  box-sizing: border-box;
+                  border: none;
+                  float:right;
+                  font-size:20px;
+                  background-color:#270949;
+                  color:white;
+                  border-bottom: 1px solid white;
+                  border-radius:15px;
+           }
+    input[type="submit"]:hover{
+                  width: 15%;
+                  float:right;
+                  padding: 5px;
+                  font-size:20px;
+                  margin: 15px 10px 0px;
+                  border: none;
+                  background-color:green;
+                  color:white;
+                  border-bottom: 1px solid white;
+                  border-radius:50px;
+
+            }
+    .theme{
+        background-color:#270949;
+        font-size:20px;
+        color:white;
+        border-radius:8px;
+
+    }
+    .check_box{
+        width:40%;
+        marign-top:3%;
+        padding-top:3%;
+        padding-left:5%;
+    }
+
+</style>
+<div class="solve_ques">
+    <div class = 'head_select'>
+            <select style="float:right;" class="theme" id="theme_id" onchange="change_theme()">
+                <option value="dracula">default</option>
+                <option value="oceanic-next">moderate</option>
+                <option value="xq-dark">dark</option>
+                <option value="3024-day">light</option>
+            </select>
+            <code style="float:right">change theme:</code>
+    </div>
+    <form action="loader" method="post">
+        {% csrf_token %}
+        <div class="code_area">
+            <textarea id="edit" name="code_area" >{{code_submited}}</textarea>
+
+            <link rel="stylesheet" type='text/css' href="{% static 'plugin/codemirror/lib/codemirror.css' %}">
+            <link rel="stylesheet" type='text/css' href="{% static 'plugin/codemirror/theme/dracula.css' %}"
+            <link rel="stylesheet" type='text/css' href="{% static 'plugin/codemirror/theme/3024-day.css' %}">
+            <link rel="stylesheet" type='text/css' href="{% static 'plugin/codemirror/theme/xq-dark.css' %}">
+            <link rel="stylesheet" type='text/css' href="{% static 'plugin/codemirror/theme/oceanic-next.css' %}">
+
+            <script type='text/javascript' src="{% static 'plugin/codemirror/lib/codemirror.js' %}"> </script>
+            <script type='text/javascript' src="{% static 'plugin/codemirror/mode/python/python.js' %}"></script>
+            <script type='text/javascript' src="{% static 'plugin/codemirror/mode/xml/xml.js' %}"></script>
+
+        </div>
+        <div class="buttons_area">
+            <input type="hidden" name="code_solve" value="[{{question_name}},{{question_type}},
+                                                     {{question_score}},{{question_code}},
+                                                     {{code}},{{input_format}},
+                                                     {{output_format}},{{constraints}},
+                                                     {{sample_input}},{{sample_output}},
+                                                     {{explanation}}]"/>
+
+            <input type="checkbox" name ='custom_check' value ='false' id="custom_input" style="color:blue;
+            margin-left:5%;
+            margin-top:3%;"
+                   onclick="custom()" onchange="if(this.checked) this.value='true'; else this.value='false';"/>
+
+            <label style="color:blue;"><ins>Custom Input</ins></label>
+
+            <input type="submit" name="run" value="submit">
+            <input type="submit" name="run" value="run">
+
+            <textarea id="text" name='custom_in' style="display:none;
+                                                        width:50%;
+                                                        height:20%;
+                                                        margin-left:5%;
+                                                        overflow:auto;">{{custom_input}}</textarea>
+
+        </div>
+
+    </form>
+    <div class="result">
+        {% block execute %}
+    
+        {% endblock %}
+    </div>
+</div>
+<script>
+            var editor = CodeMirror.fromTextArea
+			(document.getElementById('edit'),
+			{
+				mode:"python",
+				theme:'dracula',
+				lineNumbers:true
+			});
+			function change_theme(){
+                var e = document.getElementById("theme_id");
+                var result = e.options[e.selectedIndex].value;
+                editor.setOption("theme",result);
+            }
+			editor.setSize(560,480);
+
+
+			function custom() {
+			        var check_box = document.getElementById("custom_input");
+                    if (check_box.checked == true){
+                        text.style.display = "block";
+                    }
+                    else {
+                         text.style.display = "none";
+                    }
+            }
+
+</script>
+{% endblock %}

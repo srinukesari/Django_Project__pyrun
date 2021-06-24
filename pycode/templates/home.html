@@ -1,0 +1,87 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pyrun/home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script><style>
+        .an{
+          color: white;
+          float:left;
+          background-color: transparent;
+          text-decoration: none;
+          margin:15px 35px;
+          padding:10px;
+          text-align:center;
+          transition: .5s;
+          width:14%;
+
+
+        }
+        .an:hover {
+          color:#270949;
+          background:#fff;
+          box-shadow:0 0 10px rgba(255,255,255,1),
+                    0 0 20px rgba(255,255,255,1),
+                    0 0 0 75px rgba(255,255,255,.05),
+                    0 0 0 60px rgba(255,255,255,.05),
+                    0 0 0 45px rgba(255,255,255,.05),
+                    0 0 0 30px rgba(255,255,255,.05),
+                    0 0 0 15px rgba(255,255,255,.05);
+          background-color: white;
+          text-decoration:none;
+          border-radius:50px;
+        }
+        .logo {
+          padding-top: 185px;
+          height: 500px;
+          width: 50%;
+          float : left;
+          background-color: white;
+          text-align: center;
+          background-color:white;
+        }
+        .home_p {
+          height: 100%;
+          width: 50%;
+          float : left;
+          background-color:#270949;
+        }
+        .header_p {
+          height: 10%;
+          width: 100%;
+          float : left;
+          color:white;
+        }
+        .body {
+          height: 50%;
+          width: 100%;
+          float :left;
+          color:white;
+          text-align: center;
+          background-color:transparent;
+        }
+    </style>
+</head>
+<body>
+{% include 'message.html' %}
+
+<div class="logo">
+  <img src="{% static 'images/pyrun_logo.jpg' %}" margin-top="300" width="300" height='300'>
+</div>
+<div class="home_p">
+    <div class = 'header_p'>
+        <a class='an' href="home_quote">Home</a>
+        <a class="an" href="#">About Us</a>
+        <a class="an" href="login">Login</a>
+        <a class="an" href="signup">Signup</a>
+    </div>
+    <div class="body">
+        {% block content%}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>

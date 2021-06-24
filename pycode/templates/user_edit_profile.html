@@ -1,0 +1,174 @@
+{% extends 'user.html' %}
+{% load static %}
+{% static "media/profile_pics" as baseUrl %}
+{% block profile %}
+<style xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    .profile_head{
+        width:80%;
+        height:35%;
+        margin:2% 0% 2% 5%;
+        border-bottom:2px solid #270949;
+        float:left
+     }
+     .pic
+     {
+        width:25%;
+        height:100%;
+        background-color:transparent;
+        float:left;
+     }
+     .pic_info{
+        width:50%;
+        height: 100%;
+        float:left;
+        padding:2% 3%;
+     }
+     .edit_button{
+        width:10%;
+        height:35%;
+        margin: 2% 0%;
+        float:left;
+        border-bottom:2px solid #270949;
+        }
+    img {
+        border-radius: 3%;
+        }
+    input[type=submit]{
+             color: white;
+             float:left;
+             background-color:#270949;
+             text-decoration: none;
+             margin:15px 0px;
+             padding:10px 20px;
+             font-size:15px;
+             border-radius:10%;
+             border:2px solid #270949;
+        }
+    input[type=submit]:hover{
+           color:#270949 ;
+           margin:15px 0px;
+           padding:10px 20px;
+           background-color:#E9DEDC;
+           border:2px solid #270949;
+           text-decoration:none;
+           font-size:15px;
+           border-radius:10%;
+    }
+    .profile_info{
+        margin:0% 0% 0% 2%;
+        width:50%;
+        height:42%;
+        overflow:auto;
+        float:left;
+    }
+    .p_link{
+        margin:0% 0% 0% 5%;
+        width:20%;
+        padding:2% 0% 0% 3%;
+        background-color:#E9DEDC;
+        float:left;
+        height:42%;
+        overflow:auto;
+     }
+
+     textarea{
+        border:none;
+        }
+     .p_contact{
+        margin:0% 0% 0% 1%;
+        width:17%;
+        padding:1% 0% 0% 1%;
+        background-color:#E9DEDC;
+        float:left;
+        height:42%;
+        overflow:auto;
+     }
+    input[type=file]{
+        display:none;
+    }
+    label{
+        margin:1% 8%;
+        padding:1% 14%;
+        background:#270949;
+        display: table;
+        color: white;
+        border-radius:3%;
+     }
+
+</style>
+<div class="profile_head">
+    <form method="post" action="user_profile" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="pic">
+        {% if bool_pic != 1 %}
+        <strong style="margin:0px 0px 0px 20px;padding:0% 20%;
+        font-size:870%;
+        background-color:#E9DEDC;
+        border-radius:5%;"><i class="fa fa-user-o" aria-hidden="true" ></i></strong>
+        {% else %}
+        <img style='margin:0px 0px 0px 20px' src="{{profile_obj.profile_pic.url}}" width="230" height='200'>
+        {% endif %}
+         <label><i class="fa fa-camera" ></i> Change Profile Pic
+             <input type="file" name="profile_img" accept="image/*"></label>
+    </div>
+    <div class="pic_info">
+        <h1>{{profile_obj.profile_username}}</h1>
+        <i style="font-size:20px;" class="fa fa-university" aria-hidden="true">Studying at :
+            {% if profile_obj.education != "Not Mentioned" %}
+                {{profile_obj.education}}
+            {% endif %}
+        </i>
+        <br>
+        <br>
+        <i style="font-size:20px;">Skills:{{profile_obj.skill}}</i>
+        <br>
+        <br>
+        <i style="font-size:20px;">Education:
+        {% if profile_obj.education != 'Not Mentioned' %}
+        {{profile_obj.education}}
+        {% endif %}
+        </i>
+    </div>
+</div>
+<div class="edit_button">
+    <input type="submit" value="Save Changes"></input>
+</div>
+<div class="p_link">
+    <p style="background-color:#E9DEDC;padding:1% 2%;"><i class="fa fa-linkedin" aria-hidden="true">
+        LinkedIn:</i><br><textarea name="linkedin" rows="1" cols="25">{{profile_obj.linkedin}}</textarea></p>
+
+    <p style="background-color:#E9DEDC;padding:1% 2%;margin-top:2%;">
+        <i class="fa fa-github" aria-hidden="true">
+            GitHub</i><br><textarea name="github" rows="1" cols="25">{{profile_obj.github}}</textarea></p>
+
+    <p style="background-color:#E9DEDC;padding:1% 2%;margin-top:2%;">
+        <i class="fa fa-twitter" aria-hidden="true">
+            Twitter</i><br><textarea name="twiter" rows="1" cols="25">{{profile_obj.twiter}}</textarea></p>
+    <p style="background-color:#E9DEDC;padding:1% 2%;margin-top:2%;">
+        <i class="fa fa-facebook-square" aria-hidden="true">
+            Facebook</i><br><textarea name="facebook" rows="1" cols="25">{{profile_obj.facebook}}</textarea></p>
+</div>
+<div class="profile_info">
+    <p style="background-color:#E9DEDC;padding:1% 2%;"><i>solved question:</i></p>
+    {{profile_obj.ques_solved}}
+    <br>
+    <p style="background-color:#E9DEDC;padding:1% 2%;margin-top:2%;"><i>Technical Skills:</i></p>
+    <textarea name="skill" rows="2" cols="90">{{profile_obj.skill}}</textarea>
+    <p style="background-color:#E9DEDC;padding:1% 2%;margin-top:2%;"><i>Education:</i></p>
+    <textarea name="education" rows="2" cols="90">{{profile_obj.education}}</textarea>
+
+</div>
+<div class="p_contact">
+    <p style="font-size:20px;">Add your Contacts for more info</p>
+    <p style="background-color:#E9DEDC;padding:1% 10%;margin-top:2%;">
+        <i class="fa fa-mobile" aria-hidden="true">
+            Mobile</i><br><textarea name="mobile" rows="1" cols="20">{{profile_obj.mobile}}</textarea></p>
+
+    <p style="background-color:#E9DEDC;padding:1% 10%;margin-top:2%;">
+        <i class="fa fa-whatsapp" aria-hidden="true">WhatsApp</i><br>
+        <textarea name="whatsapp" rows="1" cols="20" >{{profile_obj.whatsapp}}</textarea></p>
+
+</div>
+</div>
+</form>
+{% endblock %}

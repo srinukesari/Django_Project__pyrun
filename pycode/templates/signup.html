@@ -1,0 +1,47 @@
+{% extends 'home.html'%}
+{% block content%}
+<style>
+input{
+		  width: 50%;
+		  padding: 12px 20px;
+		  margin: 20px 0;
+		  box-sizing: border-box;
+		  border: none;
+		  background-color: transparent;
+		  border-bottom: 1px solid white;
+		  border-radius:8px;
+		  color:white;
+	}
+input[type='submit']{
+          width: 15%;
+		  padding: 12px 20px;
+		  margin: 20px 0px 20px 200px;
+		  box-sizing: border-box;
+		  border: none;
+		  background-color:gray;
+		  border-bottom: 1px solid white;
+		  border-radius:8px;
+}
+
+.body{
+    color:white;
+    margin-top:150px;
+
+   }
+
+</style>
+<body>
+<form action="signup" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter Username" required><br>
+    <input type="email" name="email" placeholder="Enter E-mail" required><br>
+    <input type="password" name="password" placeholder="Enter Password" required><br>
+    <input type="submit" value="Signup"><br>
+</form>
+{% for msg in messages %}
+{% if msg.tags %}
+<script>alert("{{msg}}")</script>
+{% endif %}
+{% endfor %}
+</body>
+{% endblock%}

@@ -1,0 +1,54 @@
+{% extends 'home.html'%}
+
+{% block content%}
+<style>
+input{
+		  width: 60%;
+		  padding: 12px 20px;
+		  margin: 20px 0;
+		  box-sizing: border-box;
+		  border: none;
+		  background-color: transparent;
+		  border-bottom: 1px solid white;
+		  border-radius:8px;
+		  color:white;
+	}
+input[type='submit']{
+          width: 15%;
+		  padding: 6px 5px;
+		  margin: 10px 0px 20px 200px;
+		  box-sizing: border-box;
+		  border: none;
+		  font-size:18px;
+		  background-color:gray;
+		  border-bottom: 1px solid white;
+		  border-radius:8px;
+}
+
+.body{
+    color:white;
+    margin-top:150px;
+
+   }
+   .log{
+        width:100%;
+        height50%;
+        padding:0% 0% 0% 30%;
+        text-align:left;
+
+    }
+
+</style>
+<body>
+<div class="log">
+<form action="login" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter Username"><br>
+    <input type="password" name="password" placeholder="Enter Password"><br>
+    <a href="forgot_p" styel="text-decoration:none;padding:20% 20%;">forgot password???</a><br>
+    <input type="submit" value="Login"><br>
+</form>
+</div>
+</body>
+
+{% endblock %}

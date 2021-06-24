@@ -1,0 +1,94 @@
+{% extends 'user_timer_code.html' %}
+{% block execute_exam %}
+<style>
+    .result{
+        margin-top:60px;
+        width:96%;
+        font-size:15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border : 2px solid #270949;
+        overflow:auto;
+    }
+    .res{
+        padding:0px;
+        margin:0px 30px;
+        background-color:white;
+    }
+    .error{
+        padding:2% 1% 1% 3%;
+        margin: 0px 20px;
+        background-color:white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color:red;
+    }
+    .ts_pass{
+        padding:0px;
+        margin:0px 30px;
+        font-size:25px;
+        background-color:white;
+        width:90%;
+    }
+
+</style>
+{% if run_sub == 'run' %}
+<pre>
+    {% if return_code == 0 %}
+    <b style="font-size:15px;color:green;">{{msg}}</b>
+    {% else %}
+    <b style="font-size:15px;color:red;">{{msg}}</b>
+    {% endif %}
+    {% if flag == -1 %}
+    <div class="error">{{exec_error}}</div>
+    {% else%}
+    {% if check_status == False %}
+    {% if flag == 1 %}
+    <b style="font-size:20px;color:green;">{{ans}}</b>
+    {% elif flag == 0 %}
+    <b style="font-size:20px;color:red;">{{ans}}</b>
+    {% endif %}
+    {% endif %}
+    <b style="font-size:20px;"><ins>INPUT</ins>:</b>
+    {% if check_status == 'true' %}<div class="res">{{custom_input}}</div>
+    {% else %}<div class="res">{{sample_input}}</div>{% endif %}
+    <b style="font-size:20px;"><ins>OUTPUT</ins>:</b>
+    <div class="res">{{exec_output}}</div>
+    {% if check_status == False %}
+    <b style="font-size:20px;"><ins>Expected Output</ins>:</b>
+    <div class="res">{{sample_output}}</div>
+    {% endif %}
+    {% endif %}
+</pre>
+{% else %}
+<style>
+    .result{
+        margin-top:30px;
+        width:96%;
+        font-size:15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border : 2px solid #270949;
+        background-color:white;
+        overflow:auto;
+    }
+</style>
+<div class ='ts_pass'><strong style="color:green;">{{ts_passed}}/{{ts_len}}  test cases passed</strong></div>
+<br>
+<br>
+<div class=" ts_show">
+    {% for i in ts_results %}
+    {% if i == 1 %}
+        <p style="color:green;float:left;padding:0% 5%;font-size:17px;">&#128526; Test Case #{{forloop.counter}}</p>
+    {% elif i == 0 %}
+        <p style="color:red;float:left;padding:0% 5%;font-size:17px;">&#128543; Test Case #{{forloop.counter}}</p>
+    {% else %}
+        <p style="color:red;float:left;padding:0% 5%;font-size:17px;">&#128520; Test Case #{{forloop.counter}}</p>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <br>
+    <p style="color:green;float:left;padding:5% 5% 0%;font-size:12px;">&#128526; : Test Case Passed </p>
+    <p style="color:red;float:left;padding:5% 5% 0%;font-size:12px;">&#128543; : Test Case Failed </p>
+    <p style="color:red;float:left;padding:5% 5% 0%;font-size:12px;">&#128520; : Runtime Error </p>
+</div>
+
+{% endif %}
+{% endblock %}

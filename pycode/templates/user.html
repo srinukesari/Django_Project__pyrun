@@ -1,0 +1,209 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>user</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+
+    <style>
+        .header{
+                width:100%;
+                height:15%;
+                background-color:white;
+         }
+         .logo_space{
+                float:left;
+                width:19.9%;
+                height:100%;
+                background-color:transparent;
+         }
+         .header_content{
+                float:left;
+                width:80%;
+                height:100%;
+                background-color:#270949;
+                color:white;
+                border-radius:15px;
+                position:relative;
+          }
+          .content{
+                width:70%;
+                height:85%;
+                background-color:white;
+                float:left;
+                overflow:auto;
+                border:1px solid white;
+
+           }
+          .question{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin:5px;
+                padding-left:60px;
+                border:1px solid white;
+                width:93%;
+                float:left;
+           }
+           .ques_part{
+                width:80%;
+                float:left;
+                background-color:transparent;
+            }
+            .solve_question{
+                float:left;
+
+            }
+            .an:link,.an:visited,.an:active {
+              color: white;
+              float:left;
+              position:relative;
+              background-color: transparent;
+              text-decoration: none;
+              margin:1.5%;
+              padding:2%;
+              font-size:120%;
+            }
+            .an:hover {
+              color: #EDE5E3;
+              padding:2%;
+              background-color: transparent;
+              text-decoration:none;
+              font-size:130%;
+            }
+            .challenge{
+                padding: 10px;
+                margin:10px 10px 10px 20px;
+                float:left;
+                overflow:auto;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+             }
+            .sidebar{
+                float:left;
+                width:30%;
+                padding:10px 14px 10px 30px ;
+                overflow:auto;
+                background-color:#E9DEDC;
+            }
+            .hackathon,.hire,.rated{
+                height:22%;
+                overflow:auto;
+            }
+        ::-webkit-scrollbar {
+          width: 15px;
+        }
+
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+          border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: #270949;
+          border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: #b30000;
+        }
+
+        .dropbtn {
+            position:relative;
+              background-color:transparent;
+              color: white;
+              padding: 0px;
+              width:100%;
+              overflow:auto;
+              margin: 40px 0px 0px 40px;
+              border: none;
+              cursor: pointer;
+            }
+
+
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
+
+            .dropdown-content {
+              display: none;
+              border-radius:20%;
+              right:0;
+              position: absolute;
+              background-color: white;
+              min-width: 57%;
+
+            }
+
+
+            .dropdown-content a {
+              color: #270949;
+              padding: 2px 0px 2px 20px;
+              text-decoration: none;
+              display: block;
+            }
+
+
+            .dropdown-content a:hover {
+                background-color: #270949;
+                color:white;
+            }
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
+
+
+            .dropdown:hover .dropbtn {
+              background-color: transparent;
+            }
+    </style>
+</head>
+<body>
+{% include 'message.html' %}
+<div class ='header'>
+    <div class = 'logo_space'>
+        <img src="{% static 'images/pyrun_logo_user.jpg' %}" width='80%' height='110%'>
+    </div>
+    <div class = 'header_content'>
+        <a href="user_practise" class ="an" >Practise</a>
+        <a href="user_challenges" class="an" >Challenges</a>
+        <a href="#" class="an" >Certifications</a>
+        <a href="py_doc" class="an" >Documentation</a>
+        <a href="#" class="an" >About Us</a>
+        <div class="dropdown">
+          <button class="dropbtn"><i style="font-size:130%;"
+                                     class="fa fa-user" aria-hidden="true">{{user}}</i></button>
+          <div class="dropdown-content">
+              <a href="user_profile">Profile</a>
+              <a href="#">Rating</a>
+              <a href='logout'>Logout</a>
+          </div>
+        </div>
+
+        </div>
+    </div>
+{% block profile %}
+
+<div class ='content'>
+    {% block content %}
+
+    {% endblock %}
+</div>
+<div class="sidebar">
+    {% block body%}
+
+    {% endblock %}
+    {% block excute %}
+
+    {% endblock%}
+</div>
+{% endblock%}
+</body>
+</html>
+

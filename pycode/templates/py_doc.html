@@ -1,0 +1,1322 @@
+{% extends 'user.html' %}
+{% block profile %}
+<script src="/path/to/dist/scrollspy.min.js"></script>
+<style>
+  .header{
+                position:fixed;
+         }
+  .down{
+        width:100%;
+        height:85.9%;
+        background-color:white;
+        float:left;
+        overflow:auto;
+        border:1px solid white;
+    }
+    section {
+          position: relative;
+          white-space: nowrap;
+          word-wrap: break-word;
+          width: 75%;
+          padding:10% 1% 0% 1%;
+          float:right;
+          display: flex;
+          overflow:hidden;
+          justify-content: justify;
+          align-items: justify;
+    }
+
+    nav {
+      margin:9% 0%;
+      position: fixed;
+      top: 0;
+      float:left;
+      width: 20%;
+      height:100%;
+      background:#E9DEDC;
+      text-align: center;
+      z-index: 1;
+    }
+
+    nav a {
+      position: relative;
+      text-decoration: none;
+      padding: 10px 0px;
+      font-size: 1.6em;
+      width:100%;
+      display: inline-block;
+    }
+    nav a:hover,
+    section#one:hover ~ nav a[href="#one"] {
+      background:#270949;
+      text-decoration:none;
+      color: #fff;
+    }
+    ::-webkit-scrollbar {
+      width: 0;
+    }
+    * {
+      scroll-behavior: smooth;
+    }
+    strong{
+        font-size:25px;
+        margin:1% 0%;
+     }
+     p{
+        font-size:17px;
+        text-align:justify;
+    }
+    ins{
+        font-size:20px;
+        text-align:justify;
+        text-alin-last:left;
+    }
+
+</style>
+<div class="down">
+    <nav>
+      <a href="#one">Python Variables</a><br>
+      <a href="#two">Data Types</a><br>
+      <a href="#three">Operators</a><br>
+      <a href="#four">Conditional Statement</a><br>
+      <a href="#five">Control Statements</a><br>
+    </nav>
+    <p>
+    <section id="one"><pre><p><ins>Python Variable</ins>
+A variable means holding a value or reserving memory location to store values.In variable,
+you can store any kind of values by using appropriate data types.In Python, variables do not
+need a declaration to reserve memory space.The“variable declaration” or
+“variable initialization” happens automatically when we assign a value to a variable.
+How to Declare and use a Variable To declare a variable we use “=” to
+    assign the value to a variable.
+Example:
+We will declare the following variable and print it.
+        Number= 25
+        Name = “Kiran”
+        B= 3.5
+        print (Number)
+        print(Name)
+        print (B)
+
+        Re-declare a Variable
+        We can re-declare a variable at any point of time even after you have
+            declared it once.
+
+        Example:
+
+        Name = Python
+        print(Name)
+
+
+Multiple Assignment
+In Python, we can assign the same value to multiple variables at once.
+
+        Example:
+        x = y = z = "SoftwareTestingHelp"
+        print (x)
+        print (y)
+        print (z)
+
+We can also assign multiple values to multiple variables.
+
+        Example:
+        a, b, c = 5, 3.2, "Hello"
+        print (a)
+        print (b)
+        print (c)</p>
+        </div>
+
+    </section>
+    <section id="two">
+        <pre><p><ins>Python Data Types</ins>
+A Data Type describes the characteristic of a variable.
+        Python has six standard Data Types:
+*Numbers
+*String
+*List
+*Tuple
+*Set
+*Dictionary
+
+#1) Numbers
+In Numbers, there are mainly 3 types which include Integer, Float, and Complex.
+These 3 are defined as a class in python. In order to find to which class the variable
+        belongs to you
+    can use type () function.
+
+Example:
+
+a = 5
+print(a, "is of type", type(a))
+Output: 5 is of type class ‘int'
+
+
+
+#2) String
+A string is an ordered sequence of characters.
+
+We can use single quotes or double quotes to represent strings. Multi-line strings can be
+        represented using triple quotes, ”' or “””.
+
+Strings are immutable which means once we declare a string we can't update the
+        already declared string.
+
+Example:
+
+Single = 'Welcome'
+or
+Multi = "Welcome"
+Multiline: ”Python is an interpreted high-level programming language for general-purpose programming.
+or
+
+‘’’Python is an interpreted high-level programming language for general-purpose programming.
+We can perform several operations in strings like Concatenation, Repetition, and Slicing.
+
+Concatenation: It means the operation of joining two strings together.
+
+Example:
+
+String1 = "Welcome"
+String2 ="To Python"
+print(String1+String2)
+Output: Welcome To Python
+Repetition:
+
+It means repeating a sequence of instructions a certain number of times.
+
+Example:
+
+Print(String1*4)
+Output: WelcomeWelcomeWelcomeWelcome
+
+python repetition
+Slicing: Slicing is a technique for extracting parts of a string.
+
+Note: In Python, index starts from 0.
+
+Example:
+
+print(String1[2:5])
+Output: lco
+
+python slicing example 1
+Python also supports negative index.
+
+print(String1[-3:])
+Output: ome
+
+python slicing example 2
+As Strings are immutable in Python, if we try to update the string, then it will generate an error.
+
+Example:
+
+String[1]= "D"
+Output: TypeError: ‘str' object does not support item assignment
+
+python slicing example 3
+
+
+
+
+#3) List
+A list can contain a series of values.
+
+List variables are declared by using brackets [ ]. A list is mutable, which means we can modify the list.
+
+Example:
+
+List = [2,4,5.5,"Hi"]
+print("List[2] = ", List[2])
+Output: List[2] =  5.5
+
+Python Data type - list example
+print("List[0:3] = ", List[0:3])
+Output: List[0:3] =  [2, 4, 5.5]
+
+Python Data type - list example 2
+Updating the list:
+
+List[3] = "Hello"
+If we print the whole list, we can see the updated list.
+print(List)
+Output: [2, 4, 5.5, ‘Hello']
+
+Python - updating the list
+
+
+
+
+#4) Tuple
+A tuple is a sequence of Python objects separated by commas.
+
+Tuples are immutable, which means tuples once created cannot be modified. Tuples are defined using parentheses ().
+
+Example:
+
+Tuple = (50,15,25.6,"Python")
+print("Tuple[1] = ", Tuple[1])
+Output: Tuple[1] =  15
+
+Python Data type - tuple example 1
+print("Tuple[0:3] =", Tuple[0:3])
+Output: Tuple[0:3] =  (50, 15, 25.6)
+
+Python Data type - tuple example 2
+As Tuples are immutable in Python, if we try to update the tuple, then it will generate an error.
+
+Example:
+
+Tuple[2]= "D"
+Output: TypeError: ‘tuple' object does not support item assignment
+
+Python Data type - tuple example 3
+
+
+#5) Set
+A set is an unordered collection of items. Set is defined by values separated by a comma inside braces { }.
+
+Example:
+
+Set = {5,1,2.6,"python"}
+print(Set)
+Output: {‘python', 1, 5, 2.6}
+
+Python Data type - set example 1
+In the set, we can perform operations like union and intersection on two sets.
+
+We can perform Union operation by Using | Operator.
+
+Example:
+
+A = {'a', 'c', 'd'}
+B = {'c', 'd', 2 }
+print('A U B =', A| B)
+Output: A U B = {‘c', ‘a’, 2, ‘d'}
+
+Python Data type - set example 2
+We can perform Intersection operation by Using & Operator.
+
+A = {100, 7, 8}
+B = {200, 4, 7}
+print(A & B)
+Output: {7}
+
+Python Data type - set example 3
+As the set is an unordered collection, indexing has no meaning. Hence the slicing operator [] does not work.
+
+Set[1] = 49.3
+Output: TypeError: ‘set' object does not support item assignment
+
+Python Data type - set example 4
+
+
+
+#6) Dictionary
+Dictionaries are the most flexible built-in data type in python.
+
+Dictionaries items are stored and fetched by using the key. Dictionaries are used to store a huge amount of data. To retrieve the value we must know the key. In Python, dictionaries are defined within braces {}.
+
+We use the key to retrieve the respective value. But not the other way around.
+
+Syntax:
+
+Key:value
+
+Example:
+
+Dict = {1:'Hi',2:7.5, 3:'Class'}
+print(Dict)
+Output: {1: ‘Hi', 2: 7.5, 3: ‘Class'}
+
+Python Data type - dictionary example 1
+We can retrieve the value by using the following method:
+
+Example:
+
+print(Dict[2])
+Output: 7.5
+
+Python Data type - dictionary example 2
+If we try to retrieve the value by using the value instead of the key, then it will generate an error.
+
+Example:
+
+print("Dict[7.5] = ", Dict[7.5])
+Output:
+
+Traceback (most recent call last):
+
+File “pyshell#1”, line 1, in module
+
+print(“Dict[7.5] = “, Dict[7.5])
+
+KeyError: 7.5
+
+Python Data type - dictionary example 3
+We can update the dictionary by using the following methods as well:
+
+Example:
+
+Dict[3] = 'python'
+print(Dict)
+Output:
+
+{1: ‘Hi', 2: 7.5, 3: ‘python'}
+    </p></pre>
+</section>
+<section id="three"><pre><p><ins>Python Operators</ins>
+Operators are used for carrying out operations on values and variables.
+
+Python has 7 types of Operators as stated below:
+
+*Arithmetic Operator
+*Comparison operators
+*Logical operators
+*Bitwise operators
+*Assignment Operator
+*Identity operators
+*Membership operators
+
+
+#1) Arithmetic Operators
+Python programming language supports different kinds of arithmetic operators for both integer and floating point like addition, subtraction, multiplication, division and so on.
+
+Operator Type	Definition
+Addition (+)	Addition operator
+Subtraction (-)	Subtraction operator
+Multiplication (*)	Multiplication operator
+Division (/)	Division operator
+Modulus (%)	Reminder operator
+Floor division (//)	Divides and returns the value of the remainder.
+Exponentiation (**)	Raises the left operand to the power of right.
+Example:
+
+x = 15
+y = 10
+print('x + y =', x+y)
+Output: x + y = 25
+
+print('x - y =', x-y)
+Output: x – y = 5
+
+print('x * y =', x*y)
+Output: x * y = 150
+
+print('x / y =', x/y)
+Output: x / y = 1.5
+
+print('x % y =', x%y)
+Output: x % y = 5
+
+print('x // y =', x//y)
+Output: x // y = 1
+
+print('x ** y =', x**y)
+Output: x ** y = 576650390625
+
+Python arithmetic operator example
+
+
+#2) Comparison Operators
+Comparison operators are used for comparing values. It either returns True or False according to the condition.
+
+Operators	Definition
+Greater than (>)	True if left operand is greater than the right
+Less than (<)	True if left operand is less than the right
+Equal to (==)	True if both operands are equal
+Not equal to (!=)	True if operands are not equal
+Greater than or equal to (>=)	True if left operand is greater than or equal to the right
+Less than or equal to (<=)	True if left operand is less than or equal to the right
+Example:
+
+x = 8
+y = 15
+('x>y is',x>y)
+Output: x > y is False
+
+print('x< y is',  x<y)
+Output: x < y is True
+
+print('x == y is', x==y)
+Output: x == y is False
+
+print('x != y is', x!=y)
+Output: x != y is True
+
+print('x >= y is', x>=y)
+Output: x >= y is False
+
+print('x<= y is', x<=y)
+Output: x <= y is True
+
+Python comparision operator example
+
+
+#3) Logical Operators
+Logical operators are used for performing AND, OR and NOT operations. It either returns True or False according to the condition.
+
+Operators	Definitions
+and	True if both the operands are true
+or	True if either of the operands is true
+not	True if operand is false
+Example:
+
+a = True
+b = False
+print(‘a and b is’, a and b)
+Output: a and b is False
+
+print(‘a or b is’, a or b)
+Output: a or b is True
+
+print(‘not a is’, not a)
+Output: not a is False
+
+Python logical operator example
+
+
+#4) Bitwise Operators
+Bitwise operators operate on bits and perform bit by bit operation.
+
+Operators	Definitions
+&	        Bitwise AND
+|	        Bitwise OR
+~	        Bitwise NOT
+^	        Bitwise XOR
+>> 	        Bitwise right shift
+<< 	        Bitwise left shift
+
+
+#5) Assignment Operator
+An assignment operator is used to assign a value to a variable.
+
+Operators  Definitions	Output
+=	        x = 15	    x = 15
++=	        x += 15	    x = x + 15
+-=	        x -= 15	    x = x - 15
+*=	        x *= 15	    x = x * 15
+/=	        x /= 15	    x = x / 15
+%=	        x %= 15	    x = x % 15
+//=	        x //= 15	x = x // 15
+**=	        x **= 15	x = x ** 15
+&=	        x &= 15	    x = x & 15
+|=	        x |= 15	    x = x | 15
+^=	        x ^= 15	    x = x ^ 15
+>>=	        x >>= 15	x = x >> 15
+<<=	        x <<= 15	x = x << 15
+
+
+#6) Identity Operators
+
+Python offers 2 types of identity operators i.e is and is not.
+
+Both are used to compare if two values are located on the same part of the memory. Two variables that are equal does not imply that they are identical.
+
+Operators	Definitions
+is	True if the operands are identical
+is not	True if the operands are not identical
+Example:
+
+a1 = 3
+b1 = 3
+a2 = "Python"
+b2 = "Python"
+
+a3 = [4,5,6]
+b3 = [4,5,6]
+
+print(a1 is not b1)
+Output: False
+
+print(a2 is b2)
+Output: True
+
+print(a3 is b3)
+Output: False
+
+Python identity operator example
+Here a3 and b3 are listed, interpreter allocates memory separately and even though they are equal, it returns False.
+
+#7) Membership Operators
+Python offers 2 types of membership operators i.e in and not in.
+
+Both are used to test whether a value or variable is in a sequence.
+
+Operators	Definitions
+in	True if value is found in the sequence
+not in	True if value is not found in the sequence
+Example:
+
+a = “Python operators”
+b = {1:'x',2:'y'}
+
+print(“P” in a)
+Output: True
+
+print(“python” not in a)
+Output: False
+
+print(1 in b)
+Output: True
+
+print('y' in b)
+Output: False
+
+Python membership operators example
+1 is key and ‘x' is the value in dictionary b. Hence, ‘y' in b returns False.
+
+    Hope you are clear about Python operators and their various types.</p></pre></section>
+        <section id="four"><pre><p><ins>Conditional Statements in Python</ins>
+In programming languages, most of the time we have to control the flow of execution of your program,
+you want to execute some set of statements only if the given condition is satisfied, and a
+different set of statements when it’s not satisfied. Which we also call it as control statements
+or decision making statements.Conditional statements are also known as decision-making statements.
+We use these statements when we want to execute a block of code when the given condition is true
+or false.
+
+In Python we can achieve decision making by using the below statements:
+
+If statements
+If-else statements
+Elif statements
+Nested if and if-else statements
+Elif ladder
+In this tutorial, we will discuss all the statements in detail with some real-time examples.
+
+
+
+
+#1) If statements
+If statement is one of the most commonly used conditional statement in most of the programming languages.
+It decides whether certain statements need to be executed or not. If statement checks for a given
+condition, if the condition is true, then the set of code present inside the if block will be executed.
+
+The If condition evaluates a Boolean expression and executes the block of code only when the
+ Boolean expression becomes TRUE.
+
+Syntax:
+
+If (Boolean expression): Block of code  #Set of statements to execute if the condition is true
+Here, the condition will be evaluated to a Boolean expression (true or false). If the condition is true, then the statement or program present inside the if block will be executed and if the condition is false, then the statements or program present inside the if block will not be executed.
+
+Let’s see how it looks on a flow chart.
+
+if_statement_flowchart
+
+If you observe the above flow-chart, first the controller will come to an if condition and evaluate
+the condition if it is true, then the statements will be executed, otherwise the code present outside
+the block will be executed.
+
+Let’s see some examples on if statements.
+
+Example: 1
+
+Num = 5
+If(Num < 10):
+        print(“Num is smaller than 10”)
+
+print(“This statements will always be executed”)
+Output: Num is smaller than 10.
+
+This statements will always be executed.
+
+if_statement
+Output:
+
+if_statement_output
+In the above example, we declared a variable called ‘Num’ with the value as 5 and in the if statement we are checking if the number is lesser than 10 or not if the condition is true then a set of statements inside the if block will be executed.
+
+Example: 2
+
+a = 7
+b = 0
+if (a > b):
+            print(“a is greater than b”)
+Output:
+
+a is greater than b
+
+In the above example, we are checking the relationship between a and b using the greater than (>) operator in the if condition. If a is greater than b then ‘a is greater than b’ will be printed.
+
+Example: 3
+
+a = 7
+b = 0
+if (b < a):
+           print(“b is greater than a”)
+Output:
+
+B is greater than a
+
+Example: 4
+
+a = 7
+b = 0
+if(a):
+              print(“true”)
+Output:
+
+true
+
+If you observe, in the above example, we are not using or evaluating any condition in the if statement. Always remember that in any programming language, the positive integer will be treated as true value and an integer which is less than 0 or equal to 0 will be treated as false.
+
+Here the value of a is 7 which is positive, hence it prints true in the console output.
+
+Example: 5
+
+if (‘python’ in [‘Java’, ‘python’, ‘C#’]):
+print(“true”)
+Output:
+
+true
+
+Here, we are verifying if the element ‘python’ is present in the given list or not. ‘python’ is present in the given list, hence it prints true.
+
+Let’s take one real time example where we will use if statement.
+
+For Example, you have written an exam for a total score of 100 and if your score is above or equal to 60 then you will be considered as PASS in the exam.
+
+Let’s write the code for it.
+
+Example: 6
+
+passing_Score = 60
+my_Score = 67
+if(my_Score >= passing_Score):
+             print(“Congratulations!!!”)
+             print(“You are passed in the exam”)
+Output:
+
+Congratulations!!!
+You are passed in the exam
+
+Remember to use (:) operator at the end of the if line, because whatever the code you write after the colon operator will be a part of if block and indentation are very important in python.
+
+Example: 7
+
+passing_Score = 60
+my_Score = 67
+if(my_Score >= passing_Score):
+             print(“You are passed in the exam”)
+print(“Congratulations!!!”)
+Output:
+
+You are passed in the exam
+Congratulations!!!
+
+Here, print(“Congratulations!!!”) statement will always be executed even though if the given condition is true or false.
+
+The problem with the above code is that the statement ‘print(“Congratulations!!!”)' will always be executed even if the condition is evaluated to true or false. But in real time, if you pass in the exam or if you fail in the exam then the system will say Congratulations!!!.
+
+In order to avoid this python provides one conditional statement called if-else.
+
+
+
+#2) If-else statements
+The statement itself tells that if a given condition is true then execute the statements present inside if block and if the condition is false then execute the else block.
+
+Else block will execute only when the condition becomes false, this is the block where you will perform some actions when the condition is not true.
+
+If-else statement evaluates the Boolean expression and executes the block of code present inside the if block if the condition becomes TRUE and executes a block of code present in the else block if the condition becomes FALSE.
+
+Syntax:
+
+if(Boolean expression):
+Block of code #Set of statements to execute if condition is true
+
+else:
+Block of code #Set of statements to execute if condition is false
+Here, the condition will be evaluated to a Boolean expression (true or false). If the condition is true then the statements or program present inside the if block will be executed and if the condition is false then the statements or program present inside else block will be executed.
+
+Let’s see the flowchart of if-else
+
+if-else_statement_flowchart
+
+If you observe the above flow chart, first the controller will come to if condition and evaluate the condition if it is true and then the statements of if block will be executed otherwise else block will be executed and later the rest of the code present outside if-else block will be executed.
+
+Example: 1
+
+num = 5
+if(num > 10):
+     print(“number is greater than 10”)
+else:
+     print(“number is less than 10”)
+
+print(“This statement will always be executed”)
+Output:
+
+number is less than 10.
+
+This statement will always be executed.
+
+if-else_statement
+Output:
+
+Python - if-else_statement_output
+In the above example, we have declared a variable called ‘num’ with the value as 5 and in the if statement we are checking if the number is greater than 5 or not.
+
+If the number is greater than 5 then, the block of code inside the if block will be executed and if the condition fails then the block of code present inside the else block will be executed.
+
+Example: 2
+
+a = 7
+b = 0
+if(a > b):
+           print(“a is greater than b”)
+else:
+           print(“b is greater than a”)
+Output:
+
+a is greater than b
+
+In the above code if a is greater than b then the statements present inside the if block will be executed and the statements present inside the else block will be skipped.
+
+Example: 3
+
+a = 7
+b = 0
+if (a < b):
+            print(“a is smaller than b”)
+else:
+            print(“b is smaller than a”)
+Output:
+
+b is smaller than a
+
+In the above code, a is smaller than b, hence statements present inside the else block will be executed and statements present inside the if block will be skipped.
+
+Now let's take a real-time example.
+
+Example: 4
+
+passing_Score = 60
+my_Score = 67
+if(my_Score >= passing_Score):
+             print(“Congratulations!!!”)
+             print(“You are passed in the exam”)
+else:
+             print(“Sorry!!!”)
+             print(“You are failed in the exam, better luck next time”)
+Output:
+
+Congratulations!!!
+You are passed in the exam
+
+Example: 5
+
+passing_Score = 60
+my_Score = 47
+if(my_Score >= passing_Score):
+             print(“Congratulations!!!”)
+             print(“You are passed in the exam”)
+else:
+             print(“Sorry!!!”)
+             print(“You are failed in the exam, better luck next time”)
+Output:
+
+Sorry!!!
+You are failed in the exam, better luck next time.
+
+
+
+#3) elif statements
+In python, we have one more conditional statement called elif statements. Elif statement is used to check multiple conditions only if the given if condition false. It's similar to an if-else statement and the only difference is that in else we will not check the condition but in elif we will do check the condition.
+
+Elif statements are similar to if-else statements but elif statements evaluate multiple conditions.
+
+Syntax:
+
+if (condition):
+            #Set of statement to execute if condition is true
+elif (condition):
+            #Set of statements to be executed when if condition is false and elif condition is true
+else:
+       #Set of statement to be executed when both if and elif conditions are false
+Example: 1
+
+num = 10
+if (num == 0):
+     print(“Number is Zero”)
+
+elif (num > 5):
+       print(“Number is greater than 5”)
+
+else:
+       print(“Number is smaller than 5”)
+Output:
+
+Number is greater than 5
+
+el-if_statement
+Output:
+
+el-if_statement_output
+In the above example we have declared a variable called ‘num’ with the value as 10, and in the if statement we are checking the condition if the condition becomes true. Then the block of code present inside the if condition will be executed.
+
+If the condition becomes false then it will check the elif condition if the condition becomes true, then a block of code present inside the elif statement will be executed.
+
+If it is false then a block of code present inside the else statement will be executed.
+
+Example: 2
+
+num = -7
+if (num & gt; 0):
+              print(“Number is positive”)
+elif (num & lt; 0):
+              print(“Number is negative”)
+else:
+              print(“Number is Zero”)
+Output:
+
+Number is negative
+
+In the above example, first we are assigning value 7 to a variable called num. The controller will come to if statement and evaluate the Boolean expression num > 0 but the number is not greater than zero hence if block will be skipped.
+
+As if condition is evaluated to false the controller will come to elif statement and evaluate the Boolean expression num < 0, hence in our case number is less than zero hence ‘Number is negative' is printed.
+
+In case both if and elif condition is evaluated to false then a set of statements present inside the else block will be executed.
+
+#4) Nested if-else statements
+Nested if-else statements mean that an if statement or if-else statement is present inside another if or if-else block. Python provides this feature as well, this in turn will help us to check multiple conditions in a given program.
+
+An if statement present inside another if statement which is present inside another if statements and so on.
+
+Nested if Syntax:
+
+if(condition):
+           #Statements to execute if condition is true
+           if(condition):
+                    #Statements to execute if condition is true
+           #end of nested if
+#end of if
+The above syntax clearly says that the if block will contain another if block in it and so on. If block can contain ‘n' number of if block inside it.
+
+Example: 1
+
+num = 5
+if(num >0):
+       print(“number is positive”)
+
+if(num<10):
+       print(“number is less than 10”)
+Output:
+
+number is positive
+
+number is less than 10
+
+nested-if_statement
+Output:
+
+Python: nested-if_statement_output
+In the above example, we have declared a variable called ‘num’ with the value as 5.
+
+First, it will check the first if statement if the condition is true, then the block of code present inside the first if statement will be executed then it will check the second if statement if the first if statement is true and so on.
+
+Example: 2
+
+num = 7
+if (num != 0):
+              if (num > 0):
+                            print(“Number is greater than Zero”)
+Output:
+
+Number is greater than Zero
+
+Here, the controller will check if the given number is not equal to Zero or not, if the number is not equal to zero then it enters the first if block and then in the second if block it will check if the number is greater than Zero or not, if it's true then the control enters the nested if block and executes the statements and leaves the block and terminates the program.
+
+Example: 3
+
+if (‘python’ in [‘Java’, ‘python’, ‘C#’]):
+                         print(“Python is present in the list”)
+                         if (‘C#’ in [‘Java’, ‘python’, ‘C#’]):
+                                  print(“Java is present in the list”)
+                                  if (‘C#’ in [‘Java’, ‘python’, ‘C#’]):
+                                           print(“C# is present in the list”)
+Output:
+
+Python is present in the list
+Java is present in the list
+C# is present in the list
+
+Nested if-else Syntax:
+
+if(condition):
+           #Statements to execute if condition is true
+           if(condition):
+                     #Statements to execute if condition is true
+           else:
+                    #Statements to execute if condition is false
+else:
+            #Statements to execute if condition is false
+Here we have included if-else block inside an if block, you can also include if-else block inside else block.
+
+Example: 3
+
+num = -7
+if (num != 0):
+          if (num > 0):
+                      print(“Number is positive”)
+           else:
+                      print(“Number is negative”)
+else:
+           print(“Number is Zero”)
+Output:
+
+Number is negative
+
+
+
+#5) elif Ladder
+We have seen about the elif statements but what is this elif ladder. As the name itself suggests a program which contains ladder of elif statements or elif statements which are structured in the form of a ladder.
+
+This statement is used to test multiple expressions.
+
+Syntax:
+
+if (condition):
+            #Set of statement to execute if condition is true
+elif (condition):
+             #Set of statements to be executed when if condition is false and elif condition is true
+elif (condition):
+             #Set of statements to be executed when both if and first elif condition is false and second elif condition is true
+elif (condition):
+              #Set of statements to be executed when if, first elif and second elif conditions are false and third elif statement is true
+else:
+       #Set of statement to be executed when all if and elif conditions are false
+Example: 1
+
+my_marks = 89
+if (my_marks & lt; 35):
+              print(“Sorry!!!, You are failed in the exam”)
+elif(my_marks & lt; 60): print(“Passed in Second class”) elif(my_marks & gt; 60 and my_marks & lt; 85):
+              print(“Passed in First class”)
+else:
+              print(“Passed in First class with distinction”)
+Output:
+
+Passed in First class with distinction
+
+The above example describes the elif ladder. Firstly the control enters the if statement and evaluates the condition if the condition is true then the set of statements present inside the if block will be executed else it will be skipped and the controller will come to the first elif block and evaluate the condition.
+
+The similar process will continue for all the remaining elif statements and in case all if and elif conditions are evaluated to false then the else block will be executed.
+
+If-else in One line
+In python, we can write if statements, if-else statements and elif statements in one line without worrying about the indentation.
+
+If statement in one line
+
+We know we can write if statements as shown below
+
+Syntax:
+
+if (condition):
+         #Set of statements to execute if condition is true
+In python, it is permissible to write the above block in one line, which is similar to the above block.
+
+Syntax:
+
+if (condition): #set of statements to execute if condition in true
+There can be multiple statements as well, you just need to separate it by a semicolon (;)
+
+Syntax:
+
+if (condition): statement 1; statement 2; statement 3;…;statement n
+If the condition is true, then execute statement 1, statement 2 and so on up to statement n.
+
+In case if the condition is false then none of the statements will be executed.
+
+Example: 1
+
+num = 7
+if (num & gt; 0): print(“Number is greater than Zero”)
+Output:
+
+Number is greater than Zero
+
+Example: 2
+
+if (‘y’ in ‘Python’): print(‘1’); print(‘2’); print(‘3’)
+Output:
+
+1
+2
+3
+
+If-else statements in One line
+Syntax:
+
+if (condition):
+           #Set of statement to execute if condition is true
+else:
+            #Set of statement to execute if condition is false
+The above if-else block can also be written as shown below.
+
+Syntax:
+
+if (condition): #Set of statement to execute if condition is true
+else: #Set of statement to execute if condition is false
+There can be multiple statements as well, you just need to separate it by a semicolon (;)
+
+Syntax:
+
+if (condition): statement 1; statement 2; statement 3;…;statement n
+else: statement 1; statement 2; statement 3;…;statement n
+Example: 1
+
+num = 7
+if (num & lt; 0): print(“Number is greater than Zero”)
+else: print(“Number is smaller than Zero”)
+Output:
+
+Number is smaller than Zero
+
+Example: 2
+
+if (‘a’ in ‘fruits’): print(“Apple”); print(“Orange”)
+else: print(“Mango”); print(“Grapes”)
+Output:
+
+Mango
+Grapes
+
+elif Statements in One Line
+Syntax:
+
+if (condition):
+           #Set of statement to execute if condition is true
+elif (condition1):
+             #Set of statement to execute if condition1 is true
+else:
+             #Set of statement to execute if condition and condition1 is false
+The above elif block can also be written as below.
+
+Syntax:
+
+if (condition): #Set of statement to execute if condition is true
+elif (condition1): #Set of statement to execute if condition1 is true
+else: #Set of statement to execute if condition and condition1 is false
+There can be multiple statements as well, you just need to separate it by a semicolon (;)
+
+Syntax:
+
+if (condition): statement 1; statement 2; statement 3;…;statement n
+elif (condition): statement 1; statement 2; statement 3;…;statement n
+else: statement 1; statement 2; statement 3;…;statement n
+Example: 1
+
+num = 7
+if (num & lt; 0): print(“Number is smaller than Zero”) elif (num & gt; 0):
+                print(“Number is greater than Zero”)
+else: print(“Number is Zero”)
+Output:
+
+Number is greater than Zero
+
+Example: 2
+
+if (‘a’ in ‘fruits’): print(“Apple”); print(“Orange”)
+elif (‘u’ in ‘fruits’): print(“Mango”); print(“Grapes”)
+else: print(“No fruits available”)
+Output:
+
+Mango
+Grapes
+
+Multiple Conditions in if Statements
+It’s not that you can only write one condition inside an if statement, we can also evaluate multiple conditions in if statement like below.
+
+Example: 1
+
+num1 = 10
+num2 = 20
+num3 = 30
+if (num1 == 10 and num2 == 20 and num3 == 30):
+             print(“All the conditions are true”)
+Output:
+
+All the conditions are true
+
+Here, in if statement we are checking multiple conditions using AND operator, which means if all the conditions are true only when the statements inside an if block will be executed.
+
+We can also specify the OR operators as well.
+
+Example: 2
+
+fruitName = “Apple”
+if (fruitName == “Mango” or fruitName == “Apple” or fruitName == “Grapes”):
+              print(“It’s a fruit”)
+Output:
+
+It’s a fruit
+
+Here, in an, if statement out of three conditions, only one condition is true as that's the rule of OR operator. If any one condition is true then the condition will become true and the statement present inside the if block will be executed.
+
+Let’s consider a real-time scenario to find the number of days present in a month and we know that during a leap year the number of days will change. We will see this in a programmatic way using if, elif and else statements.
+
+Example: 1
+
+currentYear = int(input(“Enter the year: ”))
+month = int(input(“Enter the month: ”))
+if ((currentYear % 4) == 0 and (currentYear % 100) != 0 or (currentYear % 400) == 0):
+            print (“Leap Year”)
+            if (month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12):
+                       print (“There are 31 days in this month”)
+            elif (month == 4 or month == 6 or month == 9 or month == 11):
+                       print(“There are 30 days in this month”)
+            elif (month == 2):
+                         print(“There are 29 days in this month”)
+            else:
+                         print(“Invalid month”)
+elif ((currentYear % 4) != 0 or (currentYear % 100) != 0 or (currentYear % 400) != 0):
+print (“Non Leap Year”)
+              if (month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12):
+                        print (“There are 31 days in this month”)
+              elif (month == 4 or month == 6 or month == 9 or month == 11):
+                        print(“There are 30 days in this month”)
+              elif (month == 2):
+                        print(“There are 28 days in this month”)
+              else:
+                        print(“Invalid month”)
+else:
+              print(“Invalid Year”)
+Output: 1
+
+Enter the year: 2020
+Enter the month: 4
+There are 30 days in this month
+
+Output: 2
+
+Enter the year: 2020
+Enter the month: 1
+There are 31 days in this month
+
+Output: 3
+
+Enter the year: 2019
+Enter the month: 2
+There are 28 days in this month
+
+Output: 4
+
+Enter the year: 2020
+Enter the month: 2
+There are 29 days in this month
+
+
+        we learned about the Conditional Statements in Python. These are the statements which alter the control flow of execution in our program.
+
+We have different types of conditional statements like if, if-else, elif, nested if and nested if-else statements which control the execution of our program.
+
+If the statement evaluates a Boolean expression to true or false, if the condition is true then the statement inside the if block will be executed in case if the condition is false then the statement present inside the else block will be executed only if you have written the else block.
+
+We have one more statement called elif statement where the else statement is combined with an if statement, which executes depending on the previous if or elif statements.
+
+Notes:
+
+Python provides conditional statements which are helpful for verification and validation purposes.
+In Python we have 2 types of looping statements which help us to execute certain statements or block of code repeatedly
+We use ‘while loop’ when we don’t know the number of times that we need to iterate and if we know how many times we need to iterate then ‘for loop’ is the best.
+                Python provides 3 control statements which help to control the flow of execution of a program
+            </p></pre></section>
+        <section id="five">
+<pre><p><ins>Control Statements in Python</ins>
+Control statements in python are used to control the order of execution of the program based on the values and logic.
+
+Python provides us with 3 types of Control Statements:
+
+Continue
+Break
+Pass
+#1) Continue Statement:
+When the program encounters continue statement, it will skip the statements which are present after the continue statement inside the loop and proceed with the next iterations.
+
+Syntax:
+
+continue
+Example:
+
+for char in ‘Python’:
+      if (char == ‘y’):
+           continue
+      print(“Current character: “, char)
+Output:
+
+Current character: P
+
+Current character: t
+
+Current character: h
+
+Current character: o
+
+Current character: n
+
+continue_statement
+Primis Player Placeholder
+
+
+Output:
+
+continue_statement_output
+In the above example during the second iteration if the condition evaluates to true, then it will execute the continue statement. So whatever statements are present below, for loop will be skipped, hence letter ‘y’ is not printed.
+
+#2) Break Statement:
+The break statement is used to terminate the loop containing it, the control of the program will come out of that loop.
+
+Syntax:
+
+break
+Example:
+
+for char in ‘Python’:
+       if (char == ‘h’):
+           break
+       print(“Current character: “, char)
+Output:
+
+Current character: P
+
+Current character: y
+
+Current character: t
+
+break_statement
+Output:
+
+break_statement_output
+#3) Pass Statement:
+Pass statement is python is a null operation, which is used when the statement is required syntactically.
+
+Syntax:
+
+pass
+Example:
+
+for char in ‘Python’:
+       if (char == ‘h’):
+           pass
+print(“Current character: “, char)
+Output:
+
+Current character: P
+
+Current character: y
+
+Current character: t
+
+Current character: h
+
+Current character: o
+
+Current character: n
+
+pass_statement
+Output:
+
+pass_statement_output
+Hope this tutorial has explained all you need to know about Control Statements in Python</section>
+    </p></pre></i>
+</div>
+{% endblock %}

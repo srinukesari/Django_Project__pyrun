@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+
+body {
+    background-color: #270949;
+}
+
+.loading:before {
+    color:white;
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    border-top: 7px solid #fff;
+    border-right: 7px solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin .5s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+.a{
+    margin:10%;
+    background-color: #270949;
+    }
+
+</style>
+<body>
+<h1 style="color:white;text-align:center;margin:3% 30%;">Py-run</h1>
+{% if run_sub == 'submit' %}
+<i style="color:white;text-align:center;margin:0% 48%;font-size:40px;" class="fa fa-server" aria-hidden="true"></i>i>
+<h2 style="color:white;text-align:center;margin:0% 30%;"><i>Test Cases Server</i></h2>
+{% else %}
+<h2 style="color:white;text-align:center;margin:0% 30%;"><i>Code_is_runing</i></h2>
+{% endif %}
+<div class="loading"></div>
+</body>
+<script>
+    function pageRedirect() {
+        window.location.replace("/user_execute");
+    }
+    setTimeout("pageRedirect()", 0);
+</script>
+</html>
