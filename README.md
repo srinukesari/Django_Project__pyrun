@@ -1,7 +1,7 @@
 # Django_Project__pyrun
 python coding platform implemented using Django. 
 
--> first page is this app is "Home_quote.html" and when we start the app we call veiws.home_quote() first. 
+-> first page in this app pyrun is "Home_quote.html" and when we start the app we call veiws.home_quote() first. 
 -> app name i created in this project is "PYRUN".
 -> this is python coding platform project the app created in this project is pyrun.
 -> you should have to create a postgresql database account of your own and insert the credentials of postgresql account in the setting.py file in the project.
